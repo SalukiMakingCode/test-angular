@@ -8,7 +8,7 @@ import { UserListComponent } from './components/user/user-list/user-list.compone
 import { UserProfilComponent } from './components/user/user-profil/user-profil.component';
 import { UserSubscribeComponent } from './components/user/user-subscribe/user-subscribe.component';
 import { UserConnectionComponent } from './components/user/user-connection/user-connection.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,6 +22,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     imports: [
         BrowserModule,
         AppRoutingModule,
+        FormsModule,
         ReactiveFormsModule
     ],
   providers: [],

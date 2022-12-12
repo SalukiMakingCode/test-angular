@@ -1,6 +1,6 @@
 import {AbstractControl, ValidatorFn} from "@angular/forms";
 
-export function DateValidators() : ValidatorFn {
+export function DateValidators() : ValidatorFn | null {
   return (control: AbstractControl) => {
     // let value : Date = control.value;
     // const dateToday : Date = new Date();
