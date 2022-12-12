@@ -1,0 +1,9 @@
+<div id="navbar">
+  <ul *ngFor="let lien of listeLien;">
+    <li>
+      <a routerLink="{{lien.url}}">
+        {{lien.title}}
+      </a>
+    </li>
+  </ul>
+</div>

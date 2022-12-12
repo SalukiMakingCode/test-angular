@@ -1,0 +1,28 @@
+<div id="subscribe">
+  <form *ngIf="myForm" [formGroup]="myForm" (ngSubmit)="submitform()">
+    <h1>Inscription</h1>
+    <p>
+      <label>Nom :</label>
+      <input formControlName="name">
+    </p>
+    <p>
+      <label>Mot de passe :</label>
+      <input type="password" formControlName="password">
+    </p>
+    <p>
+      <label>Date de naissance (jj/mm/aaaa) : </label>
+      <input type="date" formControlName="birthDate">
+    </p>
+    <p id="listSerieTitle">
+      Liste des séries préférées : <button type="button"(click)="addSerie()">Ajouter une série</button>
+    </p>
+    <ul formArrayName="listSerie">
+      <li *ngFor="let serie of getListSerieArray().controls; let i = index">
+        Tel {{i+1}} : <input [formControlName]="i">
+      </li>
+    </ul>
+    <p id="submitZone">
+      <button [disabled]="!myForm.valid">S'inscrire</button>
+    </p>
+  </form>
+</div>
